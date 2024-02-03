@@ -1,11 +1,35 @@
 body {
-  background: grey;
+  background-color: #1e1e2e;
+  margin: 0;
+  padding: 2px;
+}
+#wrap {
+  width: 25%;
+  margin: auto;
+  background: #11111b;
+  overflow: hidden;
+  padding: 15px;
+  box-shadow: 0 0 10px #313244;
+  
 }
 h1 {
+  padding: 1%;
   text-align: center;
-  color: white;	
+  color: #c6d0f5;	
 }
 p {	
+  padding: 2%;
   text-align: center;
-  color: white;
+  color: #c6d0f5;
+}
+a:link,
+a:visited {
+    color: #cba6f7;
+    text-decoration: none;
+}
+
+a:hover,
+a:active {
+    color: #f2cdcd;
+    text-decoration: underline;
 }
