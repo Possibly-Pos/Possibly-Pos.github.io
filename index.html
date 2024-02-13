@@ -1,23 +1,133 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<link href="style.css" rel="stylesheet" type="text/css"/>
-		<title>Big P</title>
-	</head>
-	<body>
-		<div id="wrap">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+body, html {
+  background-color: #1e1e2e;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.container {
+  width: 600px;
+  padding: 15px;
+}
+
+h1 {
+  width: 100%;
+  margin: auto;
+  background: #11111b;
+  overflow: hidden;
+  padding: 15px;
+  box-shadow: 0 0 10px #313244;  
+}
+
+.ban {
+  width: 100%;
+  margin: auto;
+  background: #11111b;
+  overflow: hidden;
+  padding: 15px;
+  box-shadow: 0 0 10px #313244;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #1e1e2e;
+  color: #cba6f7;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  
+}
+
+.tablink:hover {
+  background-color: #11111b;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: #cba6f7;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+  box-shadow: 0 0 10px #313244;
+}
+
+#Home {background-color: #11111b;}
+#Links {background-color: #11111b;}
+#Help {background-color: #11111b;}
+#Contact {background-color: #11111b;}
+</style>
+</head>
+<body>
+<div class="container">
+		<div>
 			<h1><a href="https://steamcommunity.com/groups/BiggerP"><b>Big P Server Hosting</b></a></h1>
-		</div><br></br>
-		<div id="wrap">
-			<h3> All of these have either a whitelist or a password. You should know them if you are here!</h3>
-				<hr width="100%"></hr>
-			<p><a href="steam://rungameid/1623730">Pal World</a>	=	"Bigp.lol:8211"</p>
-				<hr width="100%"></hr>
-			<h3><b color="#94e2d5">"Minecraft Servers"</b></h3>
+		</div>
+		<hr width="100%"></hr>
+<button class="tablink" onclick="openPage('Home', this, '#11111b')" id="defaultOpen">Home</button>
+<button class="tablink" onclick="openPage('Links', this, '#11111b')">Servers</button>
+<button class="tablink" onclick="openPage('Help', this, '#11111b')">Help</button>
+<button class="tablink" onclick="openPage('Contact', this, '#11111b')">Contact</button>
+
+<div id="Home" class="tabcontent">
+  <p>Hi you found the website! Most information is found on the tabs above. This will host random information when it comes about</p>
+</div>
+
+<div id="Links" class="tabcontent">
+  <h3>Servers Right Now!</h3>
 			<p>Vanilla 				=	"Bigp.lol:25565"</p>
 			<p><a href="https://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/3106066-better-than-adventure-for-beta-1-7-3-timely">Better Than Adventure</a> 	=	"Bigp.lol:25566"</p>
 			<p>Hard Core				=	"Bigp.lol:25567"</p>
-				<hr width="100%"></hr>
-			<p><img src="https://i.imgur.com/F8E7Fzm.png" width="74" height="74"></p>
-		</div>
-	</body>
-</html>
+</div>
+
+<div id="Help" class="tabcontent">
+  <h3>>.></h3>
+  <p>For now the only thing you should need help with is installing BTA. So click <a href="https://bta.miraheze.org/wiki/Installing_Better_than_Adventure!">"THIS"</a></p>
+  <p></p>
+  <p>The only other thing I'd recommend everyone getting for the other server is <a href="https://modrinth.com/modpack/fabulously-optimized">Fabulously Optimized</a> as it makes the game so much more enjoyable</p>
+
+</div>
+
+<div id="Contact" class="tabcontent">
+  <h3>HMU on steam if you need me.</h3>
+  <h4>Make sure to leave a comment when you do or you will go ignored if not already on my friends list.</h4>
+  <p>https://steamcommunity.com/id/Possibly_Pos/</p>
+</div>
+<hr width="100%"></hr>
+<p class="ban"><img src="https://i.imgur.com/F8E7Fzm.png" width="74" height="74"></p>
+
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+document.getElementById("defaultOpen").click();
+</script>
+</div>
+</body>
+</html> 
