@@ -18,7 +18,15 @@ x.style.display = "none";
 document.getElementById("defaultOpen").click();
 
 function dropwindow() {
-var x = document.getElementById("prism");
+var x = document.getElementById("drop");
+if (x.style.display === "none") {
+x.style.display = "block";
+} else {
+x.style.display = "none";
+}
+}
+function dropwindow2() {
+var x = document.getElementById("drop2");
 if (x.style.display === "none") {
 x.style.display = "block";
 } else {

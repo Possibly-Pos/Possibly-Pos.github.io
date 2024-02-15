@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <div>
-        <h1><a href="https://steamcommunity.com/groups/BiggerP"><b>Big P Server Hosting</b></a></h1>
+        <a href="https://steamcommunity.com/groups/BiggerP"><img src="imgs/ban.png" id="banner" style="border-radius: 25px 25px 0px 0px;box-shadow: 0 0 10px #313244";></img></a>
       </div>
       <hr width="100%">
       </hr>
@@ -32,7 +32,7 @@
         <p></p>
         <p>The only other thing I'd recommend everyone getting for the nilla servers is <a href="https://modrinth.com/modpack/fabulously-optimized">Fabulously Optimized</a> as it makes the game so much more enjoyable</p>
       <button class="button" onclick="dropwindow()">Installing with prism Launcher</button>
-        <div id="prism" style="display: none;">
+        <div id="drop" style="display: none;">
           <h3>Prism Launcher Installation</h2>
           <p>Here are the steps to installing with Prism Launcher...</p>
           <ol>
@@ -42,8 +42,21 @@
 		  <li>Once you've found the pack you are installing select the version in the bottom right then click OK.</li>
 		  <li>You should now be able to play with the pack you've just installed.</li>
 		  </ol>
-		  
         </div>
+	  <button class="button" onclick="dropwindow2()">Fix for Prominence not launching</button>
+        <div id="drop2" style="display: none;">
+		  <h3> Gotta downgrade NeoForge.</h3>
+		  <p>To downgrade NeoForge for prominence you need to follow the following steps...</p>
+		  <ol>
+		  <li>Open Prism Launcher.</li>
+		  <li>Right click the Prominence Instance and select edit.</li>
+		  <li>Click on NeoForge found on the versions tab.</li>
+		  <li>You should now be able to select Change Version in the top right of your screen. Click that.</li>
+		  <li>Select 47.1.98 and click OK.</li>
+		  <li>You game should now be able to be launched!</li>
+		  </ol>
+		  
+		</div>
 	  </div>
       <div id="Contact" class="tabcontent">
         <p>HMU on steam if you need me.</p>
@@ -52,7 +65,7 @@
       </div>
       <hr width="100%">
       </hr>
-      <p class="ban"><img src="https://i.imgur.com/F8E7Fzm.png" width="74" height="74"></p>
+      <p class="foot"><img src="imgs/foot.png" width="80" height="80"></img></p>
     </div>
   </body>
   <script src="scripts.js"></script>
